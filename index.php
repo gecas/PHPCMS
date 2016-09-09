@@ -1,11 +1,11 @@
 <?php
 
-require 'bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-require 'Task.php';
 
-$query = new QueryBuilder(Connection::make($config['database']));
-$tasks = $query->selectAll('todos', 'Task');
+$router = new Router;
 
-require('index.view.php');
+require 'routes.php';
 
+require Router::load('routes.php')
+					->direct(Request::uri());

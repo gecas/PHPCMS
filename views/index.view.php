@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="col-md-8 col-md-offset-2">				
-	<ul class="llist-group">
+	<ul class="list-group">
 		<?php foreach ($tasks as $task) : ?>
 			<li class="list-group-item">
 				<h3 class="text-center"><?= $task->title ?></h3>
